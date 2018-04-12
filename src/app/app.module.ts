@@ -20,12 +20,15 @@ import { DemoComponent } from './components/demo/demo.component';
 import { DameDetailComponent } from './components/dame-detail/dame-detail.component';
 import { DemoService } from './demo.service';
 
+import { MessagesComponent } from "./components/messages/messages.component";
+
 @NgModule({
   //组件声明
   declarations: [
     AppComponent,
     DemoComponent,
-    DameDetailComponent
+    DameDetailComponent,
+    MessagesComponent,
   ],
   //外部模块的引用
   imports: [
