@@ -1,0 +1,52 @@
+
+$ms:'microsoft yahei';
+$csm:'Comic Sans MS';
+$kt:'kaiti';
+@mixin cOfUnknownElement(){
+	display: flex;
+	justify-content: center;
+}
+@mixin vcOfUnkKnownElement(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin vcOfKnownElement(){
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+@mixin bgi($url){
+	background: url($url) no-repeat center;
+	background-size: contain;
+}
+
+div{
+	@include bgi('../assets/logo-img.png');
+	font-size: 16px;
+	h1{
+		color:red;
+		border: solid 1px #999;
+		background-color: #666;
+		font-family: $csm;
+		text-align: center;
+	}
+	border: solid 1px #999;
+	ul.list{
+		text-align: left;
+		font-family: $csm;
+		li{
+			text-indent: 2em;
+		}
+	}
+}
+
+app-demo{
+	background-color: #acbbde;
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	font-family: $kt;
+}

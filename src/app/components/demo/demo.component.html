@@ -1,0 +1,24 @@
+
+<header>I am component demo <span *ngIf = 'clickData'>{{clickData.name | uppercase }}</span></header>
+<form action="">
+  <div class="name">
+    <label for="">name</label>
+    <input type="text" [(ngModel)] = 'demo.name' name='name'>
+    <select name="" id="">
+      <!-- *ngFor 是一个 Angular 的复写器（repeater）指令。 它会为列表中的每项数据复写它的宿主元素。 -->
+      <option value="" *ngFor='let item of server_datas'>{{item.name}}</option>
+    </select>
+  </div>
+</form>
+
+<ul>
+  <li *ngFor = 'let item of demo_datas' [class.selected]='clickData == item'> <!-- class 绑定来切换 CSS 的样式类。   [class.some-css-class]="some-condition"   -->
+    <!-- click 外面的圆括号会让 Angular 监听这个 <li> 元素的 click 事件。 当用户点击 <li> 时，Angular 就会执行表达式getName(id)。 -->
+    <p (click) = 'getName(item)'>id:{{item.id}}</p>
+    <p>name:{{item.name}}</p>
+    <hr>
+  </li>
+</ul>
+
+<!-- 这是一种单向数据绑定。从 DemoComponent 的 clickData 属性绑定到目标元素的 detail 属性，并映射到了 DemoDetailComponent 的 detail 属性。 -->
+<app-dame-detail [detail] = 'clickData'></app-dame-detail>

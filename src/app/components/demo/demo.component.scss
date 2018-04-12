@@ -1,0 +1,17 @@
+
+$ms:'microsoft yahei';
+$csm:'Comic Sans MS';
+$kt:'kaiti';
+header{
+    text-align: left;
+    text-indent: 2em;
+}
+ul{
+    text-align: left;
+    font-size: 16px;
+    font-family: $csm;
+    text-indent: 4em;
+    li.selected{
+        background-color: orange;
+    }
+}
